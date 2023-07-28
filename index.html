@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinecops</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
+
 <body>
-    Hello, world!
+    <header>
+        <div class="logo-container">
+            <img src="assets/img/logo_transparent.png" alt="">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li>Home</li>
+                <li>Ingressos</li>
+                <li>Cinemas</li>
+                <li>Cadastro</li>
+                <li>Ajuda</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="carousel">
+                <div class="banner active">
+                    <!-- Conteúdo do primeiro banner -->
+                    <img src="assets/img/joker-banner-joaquin-phoenix.jpg" alt="Banner 1">
+                </div>
+                <div class="banner">
+                    <!-- Conteúdo do segundo banner -->
+                    <img src="/assets/img/Soul-banner.jpg" alt="Banner 2">
+                </div>
+                <div class="banner">
+                    <!-- Conteúdo do terceiro banner -->
+                    <img src="/assets/img/61dcf2b4e0b6b6ee6099e20049a70717.jpg" alt="Banner 3">
+                </div>
+                <!-- Adicione mais banners conforme necessário -->
+                <div class="carousel-navigation">
+                    <span class="prev" onclick="prevBanner()">&lt;</span>
+                    <span class="next" onclick="nextBanner()">&gt;</span>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+<script src="script.js"></script>
 </html>
