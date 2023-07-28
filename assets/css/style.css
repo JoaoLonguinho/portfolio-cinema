@@ -47,10 +47,10 @@ header {
     list-style-type: none;
     flex-wrap: wrap;
     color: white;
-}
-
-.menu ul li {
     height: 100%;
+  }
+  
+  .menu ul li {
     width: 4%;
     min-width: 120px;
     height: 100%;
@@ -72,7 +72,7 @@ header {
     border-radius: 10px;
 }
 @media (max-width: 600px) {
-  header{
-    
+  .menu ul{
+    height: auto;
   }
 }
