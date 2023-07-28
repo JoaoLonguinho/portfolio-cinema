@@ -12,6 +12,7 @@ body {
 header {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     background: #03071E;
 }
 
@@ -45,73 +46,27 @@ header {
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    flex-wrap: wrap;
     color: white;
 }
 
 .menu ul li {
     width: 4%;
-    height: 10%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     padding: 25px;
     box-sizing: border-box;
     cursor: pointer;
 }
-
 .menu ul li:hover {
     background-color: #FFBA08;
     color: #03071E;
     font-weight: 800;
-    width: 8%;
+    width: 120px;
     height: 60%;
     transition: 0.2s;
     border-radius: 10px;
 }
-
-
-  
-  .carousel {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .banner {
-    width: 100%;
-    height: 100%;
-    display: none;
-    transition: opacity 0.5s;
-    position: absolute;
-  }
-  
-  .active {
-    display: block;
-  }
-  
-  .carousel-navigation {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .carousel-navigation span {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    line-height: 30px;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 0 5px;
-  }
-  
-  .carousel-navigation .prev {
-    transform: rotate(180deg);
-  }
-  
