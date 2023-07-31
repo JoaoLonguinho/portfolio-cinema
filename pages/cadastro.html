@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/assets/css/cadastro.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("./pages/footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <main>
+        <section>
+            <div class="card-cadastro">
+                <h1>Cadastro de Usuário</h1>
+                <div class="cadastro">
+                    <form action="/cadastrar" method="post">
+                        <div>
+                            <label for="nome"></label>
+                            <input type="text" id="nome" name="nome" required placeholder="Nome">
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" required placeholder="E-mail">
+                        </div>
+                        <div>
+                            <label for="senha"></label>
+                            <input type="password" id="senha" name="senha" required placeholder="Senha">
+                            <label for="confirmar_senha"></label>
+                            <input type="password" id="confirmar_senha" name="confirmar_senha" required placeholder="Confirmar Senha"> 
+                        </div>
+                        <div>
+                            <label for="data_nascimento">Data de Nascimento</label>
+                            <input type="date" id="data_nascimento" name="data_nascimento" required>
+                        </div>
+                        <div>
+                            <label for="genero">Gênero</label>
+                            <select id="genero" name="genero">
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <input class="btn-cadastrar" type="submit" value="Cadastrar">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
