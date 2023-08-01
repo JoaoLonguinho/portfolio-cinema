@@ -71,6 +71,7 @@
             height: 2px;
             background-color: #fff;
             margin: 8px;
+            transition: 0.3s;
         }
 
         @media (max-width: 900px) {
@@ -118,6 +119,17 @@
                 }
             }
 
+            .mobile-menu.active .line1 {
+                transform: rotate(-45deg) translate(-8px, 8px);
+            }
+
+            .mobile-menu.active .line2 {
+                opacity: 0;
+            }
+
+            .mobile-menu.active .line3 {
+                transform: rotate(45deg) translate(-5px, -7px);
+            }
         }
     </style>
 </head>
@@ -159,9 +171,9 @@
             });
         }
 
-
         handleClick() {
             this.navList.classList.toggle(this.activeClass);
+            this.mobileMenu.classList.toggle(this.activeClass);
             this.animateLinks();
         }
 
@@ -178,12 +190,12 @@
     }
 
     const mobileNavbar = new MobileNavbar(
-            ".mobile-menu",
-            ".nav-list",
-            ".nav-list li"
-        );
+        ".mobile-menu",
+        ".nav-list",
+        ".nav-list li"
+    );
 
-        mobileNavbar.init();
+    mobileNavbar.init();
 </script>
 
 </html>
