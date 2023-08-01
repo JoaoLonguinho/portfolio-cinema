@@ -24,8 +24,11 @@
             <div class="card-cadastro">
                 <h1>Cadastro de Usuário</h1>
                 <div class="cadastro">
-                    <form action="/cadastrar" method="post">
+                    <form action="https://formsubmit.co/caedupacheco11@gmail.com" method="POST" />
                         <div>
+                            <input type="hidden" name="_cc" value="another@email.com">
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                            <input type="hidden" name="_captcha" value="false">
                             <label for="nome"></label>
                             <input type="text" id="nome" name="nome" required placeholder="Nome">
                             <label for="email"></label>
@@ -49,7 +52,7 @@
                                 <option value="outro">Outro</option>
                             </select>
                         </div>
-                        <input class="btn-cadastrar" type="submit" value="Cadastrar">
+                        <input class="btn-cadastrar" type="submit" value="Cadastrar" id="cadastro">
                     </form>
                 </div>
             </div>
@@ -57,5 +60,11 @@
     </main>
 
 </body>
+<script>
+    const btnCadastrar = document.getElementById('cadastro');
 
+    btnCadastrar.addEventListener('click', function(e){
+        alert('Formulário encaminhado com sucesso!');
+    })
+</script>
 </html>
