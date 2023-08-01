@@ -21,6 +21,7 @@ section {
   height: 100vh;
   width: 60%;
   min-width: 280px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,11 +30,12 @@ section {
 }
 
 form {
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 
 form div {

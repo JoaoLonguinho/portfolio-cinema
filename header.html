@@ -14,188 +14,188 @@
 
         body {
             font-family: 'Roboto Mono', monospace;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
-        header {
-            display: flex;
-            background: #03071E;
-            padding: 20px;
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
         }
 
-        .logo-container {
+        a:hover {
+            opacity: 0.7;
+        }
+
+        .logo {
             display: flex;
-            align-items: center;
-            background-color: white;
-            transition: 0.2s;
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
             border-radius: 50%;
         }
 
-        .logo-container img {
-            width: 100px;
-            height: 100px;
+        .logo img {
+            width: 100%;
         }
 
-        .container-menu {
+        nav {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            width: 90%;
+            font-family: 'Roboto Mono', monospace;
+            background-color: #03071E;
+            height: 10vh;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
-        .menu-responsivo {
+        .nav-list {
+            width: 70%;
+            list-style: none;
             display: flex;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            justify-content: center;
-            align-items: center;
+        }
+
+        .nav-list li {
+            letter-spacing: 5px;
+            margin-left: 30px;
+        }
+
+        .mobile-menu {
             cursor: pointer;
             display: none;
         }
 
-        .menu-responsivo button {
-            display: flex;
+        .mobile-menu div {
+            width: 32px;
+            height: 2px;
+            background-color: #fff;
+            margin: 8px;
+            transition: 0.3s;
         }
 
-        .menu-responsivo:hover {
-            background-color: #ffffff28;
-        }
-
-        .menu-responsivo ul {
-            display: flex;
-            list-style-type: none;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .menu-responsivo ul li {
-            gap: 10px;
-            height: 5px;
-            width: 60px;
-            background-color: #000000;
-        }
-
-        .menu {
-            width: 92%;
-        }
-
-        .menu ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style-type: none;
-            color: white;
-            height: 100%;
-        }
-
-        .menu ul li {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 25px;
-            cursor: pointer;
-            box-sizing: border-box;
-        }
-
-        .menu ul li:hover {
-            width: 180px;
-            height: 60%;
-            transform: scale(1.2);
-            background-color: #FFBA08;
-            color: #03071E;
-            font-weight: 800;
-            transition: 0.2s;
-            border-radius: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        @media (max-width: 800px) {
-            header {
-                display: flex;
-                background: #03071E;
-                padding: 20px;
+        @media (max-width: 900px) {
+            body {
+                overflow-x: hidden;
             }
 
-            .container-menu {
-                justify-content: end;
-            }
-
-            .menu {
-                display: none;
-            }
-
-            .menu-responsivo {
-                display: flex;
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-            }
-
-            .menu-responsivo button {
-                display: flex;
-            }
-
-            .menu-responsivo:hover {
-                background-color: #ffffff28;
-            }
-
-            .menu-responsivo ul {
-                display: flex;
-                list-style-type: none;
+            .nav-list {
+                position: absolute;
+                top: 10vh;
+                right: 0;
+                width: 50vw;
+                height: 90vh;
+                background-color: #03071E;
                 flex-direction: column;
-                gap: 10px;
+                align-items: center;
+                justify-content: space-around;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in;
             }
 
-            .menu-responsivo ul li {
-                gap: 10px;
-                height: 5px;
-                width: 60px;
-                background-color: #000000;
+            .nav-list li {
+                margin-left: 0;
+                opacity: 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-list.active {
+                transform: translateX(0);
+                transition: transform 0.3s ease-in;
+            }
+
+            @keyframes navLinkFade {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .mobile-menu.active .line1 {
+                transform: rotate(-45deg) translate(-8px, 8px);
+            }
+
+            .mobile-menu.active .line2 {
+                opacity: 0;
+            }
+
+            .mobile-menu.active .line3 {
+                transform: rotate(45deg) translate(-5px, -7px);
             }
         }
     </style>
 </head>
 <header>
-    <div class="logo-container">
-        <img src="/assets/img/logo_transparent.png" alt="">
-    </div>
-    <nav class="container-menu">
-        <div class="menu-responsivo">
-            <button>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </button>
+    <nav>
+        <img class="logo" src="assets/img/logo_transparent.png" alt="" srcset="">
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-        <div class="menu">
-            <ul>
-                <a href="/index.html">
-                    <li>Home</li>
-                </a>
-                <a href="/pages/ingressos.html">
-                    <li>Ingressos</li>
-                </a>
-                <a href="#">
-                    <li>Cinemas</li>
-                </a>
-                <a href="./pages/cadastro.html">
-                    <li>Cadastro</li>
-                </a>
-                <a href="#">
-                    <li>Ajuda</li>
-                </a>
-            </ul>
-        </div>
+        <ul class="nav-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="pages/ingressos.html">Ingressos</a></li>
+            <li><a href="">Cinema</a></li>
+            <li><a href="pages/cadastro.html">Cadastro</a></li>
+            <li><a href="">Ajuda</a></li>
+        </ul>
     </nav>
 </header>
+
+<script></script>
+
+<script>
+    class MobileNavbar {
+        constructor(mobileMenu, navList, navLinks) {
+            this.mobileMenu = document.querySelector(mobileMenu);
+            this.navList = document.querySelector(navList);
+            this.navLinks = document.querySelectorAll(navLinks);
+            this.activeClass = "active";
+            this.handleClick = this.handleClick.bind(this);
+        }
+
+        animateLinks() {
+            this.navLinks.forEach((link, index) => {
+                link.style.animation = this.navList.classList.contains(this.activeClass)
+                    ? `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`
+                    : "";
+            });
+        }
+
+        handleClick() {
+            this.navList.classList.toggle(this.activeClass);
+            this.mobileMenu.classList.toggle(this.activeClass);
+            this.animateLinks();
+        }
+
+        addClickEvent() {
+            this.mobileMenu.addEventListener("click", this.handleClick);
+        }
+
+        init() {
+            if (this.mobileMenu) {
+                this.addClickEvent();
+            }
+            return this;
+        }
+    }
+
+    const mobileNavbar = new MobileNavbar(
+        ".mobile-menu",
+        ".nav-list",
+        ".nav-list li"
+    );
+
+    mobileNavbar.init();
+</script>
 
 </html>
