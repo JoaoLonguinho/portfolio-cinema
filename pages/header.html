@@ -21,8 +21,6 @@
             display: flex;
             background: #03071E;
             padding: 20px;
-            justify-content: center;
-            height: 100px;
         }
 
         .logo-container {
@@ -41,6 +39,7 @@
         .container-menu {
             display: flex;
             align-items: center;
+            width: 90%;
         }
 
         .menu-responsivo {
@@ -51,6 +50,7 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            display: none;
         }
 
         .menu-responsivo button {
@@ -58,7 +58,7 @@
         }
 
         .menu-responsivo:hover {
-            background-color: #FFBA08;
+            background-color: #ffffff28;
         }
 
         .menu-responsivo ul {
@@ -114,8 +114,50 @@
         }
 
         @media (max-width: 800px) {
+            header {
+                display: flex;
+                background: #03071E;
+                padding: 20px;
+            }
+
+            .container-menu {
+                justify-content: end;
+            }
+
             .menu {
                 display: none;
+            }
+
+            .menu-responsivo {
+                display: flex;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .menu-responsivo button {
+                display: flex;
+            }
+
+            .menu-responsivo:hover {
+                background-color: #ffffff28;
+            }
+
+            .menu-responsivo ul {
+                display: flex;
+                list-style-type: none;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu-responsivo ul li {
+                gap: 10px;
+                height: 5px;
+                width: 60px;
+                background-color: #000000;
             }
         }
     </style>

@@ -37,6 +37,7 @@ form {
 }
 
 form div {
+  gap: 10px;
   text-align: center;
 }
 
@@ -60,4 +61,12 @@ input {
 .btn-cadastrar:hover{
   background-color: #FFBA08;
   transition: 0.2s;
+}
+@media (max-width: 800px) {
+  .card-cadastro{
+    width: 100vw;
+  }
+  form{
+    gap: 30px;
+  }
 }
