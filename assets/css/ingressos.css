@@ -1,0 +1,65 @@
+.featured-movie{
+    background-image: url('https://d235gwso45fsgz.cloudfront.net/as-assets/variants/c0r85kdgrsnl6j4fgwj8e0xqtjq9/2748e9350ed673f0bc85d759bfecfbf38216ad0efa85a36a7f0474da46c6343d');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    padding: 50px 0px;
+}
+.bgmovie{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 70%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.featured-movie-img-container{ /* container imagem banner principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    width: 45%;
+    flex-wrap: wrap;
+}
+.featured-movie-infos{ /* container infos banner principal */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.849);
+    gap: 20px;
+    min-width: 200px;
+    width: 45%;
+    flex-wrap: wrap;
+}
+.featured-movie-img{
+    width: 80%;
+    border-radius: 30px;
+    padding: 20px;
+    margin: auto;
+}
+
+
+.featured-movie-classify{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.age{
+    width: 20px;
+}
+.rate{
+    height: 20px;
+}
+.btn-buy-ticket{
+    background-color: red;
+    padding: 10px 30px;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+}
