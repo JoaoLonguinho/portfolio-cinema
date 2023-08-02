@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selecione seu lugar</title>
+    <link rel="stylesheet" href="../assets/css/filme.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("./pages/footer.html");
+        });
+    </script>
 </head>
 <body>
-    
+    <div id="header"></div>
+    <main>
+        <section class="featured-movie">
+            <div class="bgmovie">
+                <div class="featured-movie-img-container">
+                    <img src="https://tracklist.com.br/wp-content/uploads/2023/04/barbie-poster.png" alt="" class="featured-movie-img">
+                </div>
+                <div class="featured-movie-infos">
+                    <h2 class="featured-movie-title">
+                        Barbie
+                    </h2>
+                    <p class="featured-movie-description">
+                        Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.
+                    </p>
+                    <div class="featured-movie-classify">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/DJCTQ_-_L.svg/1200px-DJCTQ_-_L.svg.png" alt="" class="age">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/1024px-5_stars.svg.png" alt="" class="rate">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tickets-time-container">
+            <div class="tickets-time">
+                <div class="time-container-title">
+                    <h2>Horários:</h2>
+                </div>
+                <div class="time-container">
+                    <div class="time">12h10</div>
+                    <div class="time">12h50</div>
+                    <div class="time">13h40</div>
+                    <div class="time">15h20</div>
+                    <div class="time">16h10</div>
+                    <div class="time">16h50</div>
+                    <div class="time">21h00</div>
+                    <div class="time">23h00</div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
