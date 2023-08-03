@@ -1,0 +1,30 @@
+.title-lugares{
+    text-align: center;
+    margin-top: 20px;
+}
+.seats-container-a, .seats-container-b, .seats-container-c{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: auto;
+}
+
+.seats-container{
+    width: 60%;
+    margin: auto;
+    margin-top: 150px;
+}
+.lugar{
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.lugar:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+.lugar img{
+    width: 100%;
+}
